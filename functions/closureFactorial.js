@@ -23,4 +23,4 @@ let factorialCache = createFactorialCache(
 
 factorialCache(5); // La primera iteracion calcula los factoriales del  1 al 5 y los guarda en caché.
 factorialCache(5); // La segunda iteracion accede directamente al cache de 5
-factorialCache(4); // Dado que la primera iteracion calculó del 1 al 4, también fue guardado el resultado del factorial de 4.
+factorialCache(4); // Dado que la primera iteracion calculó del 1 al 5, también fue guardado el resultado del factorial de 4.
