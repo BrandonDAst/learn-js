@@ -22,7 +22,7 @@ function run() {
     (resolve, reject) => {
       setTimeout(() => {
         if (random % 2 == 0) resolve(`${random} Es par.`)
-        // else reject(`${random} Es non.`)
+        else reject(`${random} Es impar.`)
       }, 500)
     }
   );
@@ -40,6 +40,16 @@ function run() {
     .catch((errorMessage) => { console.log(errorMessage) })
     .finally(() => { console.log("Terminamos. ") })
 }
+
+let promise = new Promise((resolve, reject) => {
+  const num = 10;
+  if (num >= 100) resolve("Promesa resuelta.")
+  else reject("Promesa rechazada.")
+})
+
+promise.then(result => console.log(result)) // Promesa resuelta.
+  .catch(error => console.log(error)) // Promesa rechazada.
+  .finally(() => console.log("Terminamos."))
 
 run();
 
